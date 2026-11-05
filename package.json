@@ -1,0 +1,56 @@
+{
+  "name": "web_fashion_essay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/bin/www",
+    "dev": "nodemon src/bin/www",
+    "dev:watch": "node --watch src/bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "config": "^4.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "mongoose": "^6.13.8",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.6",
+    "redis": "^5.8.2",
+    "slug": "^9.1.0",
+    "vnpay": "^2.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/public/uploads/*",
+      "src/tmp/*",
+      "logs/*",
+      "*.log",
+      "node_modules/*"
+    ],
+    "watch": [
+      "src"
+    ],
+    "ext": "js,json",
+    "verbose": true,
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/apps/app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/public/(.*)",
+      "dest": "/src/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/apps/app.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
